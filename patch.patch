@@ -1,0 +1,27 @@
+diff --git a/other/download_libs.sh b/other/download_libs.sh
+index 09343d2..c5d62bd 100755
+--- a/other/download_libs.sh
++++ b/other/download_libs.sh
+@@ -95,18 +95,12 @@ universal | arm64 | x86_64)
+   ;;
+ esac
+ 
++set -eu
++
+ SCRIPT_PATH=$(realpath "$0")
+-ROOT_PATH=$(dirname "$SCRIPT_PATH")
++ROOT_PATH=$(dirname "$(dirname "$SCRIPT_PATH")")
+ 
+-if [[ $(basename "$ROOT_PATH") != "$PROJECT_NAME" ]]; then
+-  while [[ "$ROOT_PATH" != "/" && $(basename "$ROOT_PATH") != "$PROJECT_NAME" ]]; do
+-    ROOT_PATH=$(dirname "$ROOT_PATH")
+-  done
+-  if [[ "$ROOT_PATH" == "/" ]]; then
+-    echo "Unable to find the root directory '$PROJECT_NAME' containing the script file." >&2
+-    exit 1
+-  fi
+-fi
++echo "$ROOT_PATH"
+ 
+ DEPS_PATH="$ROOT_PATH/deps"
+ LIB_PATH="$DEPS_PATH/lib"
