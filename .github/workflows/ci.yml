@@ -36,6 +36,7 @@ jobs:
           git apply ./iina-build/patch.patch
           brew tap vivid-lapin/tap
           brew install vivid-lapin/tap/mpv
+          ./other/download_libs.sh
           rm -rf ./deps/executable/youtube-dl
           ./other/change_lib_dependencies.rb "$(brew --prefix)" "$(brew --prefix vivid-lapin/tap/mpv)/lib/libmpv.dylib"
 
