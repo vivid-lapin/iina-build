@@ -20,7 +20,7 @@ jobs:
         include:
           - xcode: "16.4"
             deployment_target: ""
-    runs-on: macos-latest
+    runs-on: macos-15
 
     steps:
       - uses: actions/checkout@v4
