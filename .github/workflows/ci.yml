@@ -27,10 +27,9 @@ jobs:
         with:
           repository: "iina/iina"
           ref: 9f556bf9be37a1611743e0268ed2ca543ec55c84
-          path: .
 
       - name: Install dependencies
-        run: ./other/download_libs.sh
+        run: ./other/download_libs.sh "$(pwd)"
 
       - name: Prepare
         run: |
