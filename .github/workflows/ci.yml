@@ -1,0 +1,55 @@
+# SPDX-License-Identifier: GPL-3.0
+# https://github.com/iina/iina/blob/9f556bf9be37a1611743e0268ed2ca543ec55c84/.github/workflows/ci.yml
+
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    paths-ignore:
+      - .gitignore
+      - LICENSE
+      - "**.md"
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - xcode: "16.4"
+            deployment_target: ""
+    runs-on: macos-15
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: "iina/iina"
+          ref: 9f556bf9be37a1611743e0268ed2ca543ec55c84
+      - uses: actions/checkout@v4
+        with:
+          path: iina-build
+
+      - name: Prepare
+        run: |
+          git apply ./iina-build/patch.patch
+          brew tap vivid-lapin/tap
+          brew install vivid-lapin/tap/mpv
+          ./other/change_lib_dependencies.rb "$(brew --prefix)" "$(brew --prefix vivid-lapin/tap/mpv)/lib/libmpv.dylib"
+          curl -L https://iina.io/dylibs/universal/libgcc_s.1.1.dylib -o deps/lib/libgcc_s.1.1.dylib
+          curl -L https://iina.io/dylibs/universal/libstdc++.6.dylib -o deps/lib/libstdc++.6.dylib
+
+      - name: Build
+        run: xcodebuild -project iina.xcodeproj ONLY_ACTIVE_ARCH=YES -scheme iina -configuration Nightly ${{ matrix.deployment_target }}
+        env:
+          DEVELOPER_DIR: /Applications/Xcode_${{ matrix.xcode }}.app/Contents/Developer
+
+      - name: Archive
+        run: tar cvJf ~/iina.tar.xz -C /Users/runner/Library/Developer/Xcode/DerivedData/iina-amtoupywcxwchwbbpastngxpnnbn/Build/Products/Nightly IINA.app
+
+      - name: Save artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: IINA
+          path: ~/iina.tar.xz
