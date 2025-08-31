@@ -41,7 +41,7 @@ jobs:
           ./other/change_lib_dependencies.rb "$(brew --prefix)" "$(brew --prefix vivid-lapin/tap/mpv)/lib/libmpv.dylib"
 
       - name: Build
-        run: xcodebuild -project iina.xcodeproj ONLY_ACTIVE_ARCH=NO -scheme iina -configuration Nightly ${{ matrix.deployment_target }}
+        run: xcodebuild -project iina.xcodeproj ONLY_ACTIVE_ARCH=YES -scheme iina -configuration Nightly ${{ matrix.deployment_target }}
         env:
           DEVELOPER_DIR: /Applications/Xcode_${{ matrix.xcode }}.app/Contents/Developer
 
