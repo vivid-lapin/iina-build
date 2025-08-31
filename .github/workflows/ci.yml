@@ -31,14 +31,9 @@ jobs:
         with:
           path: iina-build
 
-      - name: Apply patches
-        run: git apply ./iina-build/patch.patch
-
-      - name: Install dependencies
-        run: ./other/download_libs.sh
-
       - name: Prepare
         run: |
+          git apply ./iina-build/patch.patch
           brew tap vivid-lapin/tap
           brew install vivid-lapin/tap/mpv
           rm -rf ./deps/executable/youtube-dl
