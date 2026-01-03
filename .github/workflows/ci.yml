@@ -12,6 +12,7 @@ on:
       - .gitignore
       - LICENSE
       - "**.md"
+  workflow_dispatch:
 
 jobs:
   build:

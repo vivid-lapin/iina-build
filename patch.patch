@@ -196,7 +196,7 @@ index d54fe66..1b4a9fa 100644
 +		CE6E7CAC2E64644500890E6B /* libssh.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6E7C692E64644500890E6B /* libssh.4.dylib */; };
 +		CE6E7CAD2E64644500890E6B /* libswresample.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6E7C6E2E64644500890E6B /* libswresample.6.dylib */; };
 +		CE6E7CAE2E64644500890E6B /* libogg.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6E7C522E64644500890E6B /* libogg.0.dylib */; };
-+		CE6E7CB02E64644500890E6B /* libx264.164.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6E7C842E64644500890E6B /* libx264.164.dylib */; };
++		CE6E7CB02E64644500890E6B /* libx264.165.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6E7C842E64644500890E6B /* libx264.165.dylib */; };
 +		CE6E7CB12E64644500890E6B /* libssl.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6E7C6A2E64644500890E6B /* libssl.3.dylib */; };
 +		CE6E7CB22E64644500890E6B /* libx265.215.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6E7C852E64644500890E6B /* libx265.215.dylib */; };
 +		CE6E7CB52E64644500890E6B /* libzimg.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6E7C8C2E64644500890E6B /* libzimg.2.dylib */; };
@@ -353,7 +353,7 @@ index d54fe66..1b4a9fa 100644
 +		CE6E7D672E64644D00890E6B /* libwebp.7.dylib in Copy Dylibs */ = {isa = PBXBuildFile; fileRef = CE6E7C812E64644500890E6B /* libwebp.7.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 +		CE6E7D682E64644D00890E6B /* libwebpmux.3.dylib in Copy Dylibs */ = {isa = PBXBuildFile; fileRef = CE6E7C822E64644500890E6B /* libwebpmux.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 +		CE6E7D692E64644D00890E6B /* libX11.6.dylib in Copy Dylibs */ = {isa = PBXBuildFile; fileRef = CE6E7C832E64644500890E6B /* libX11.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-+		CE6E7D6A2E64644D00890E6B /* libx264.164.dylib in Copy Dylibs */ = {isa = PBXBuildFile; fileRef = CE6E7C842E64644500890E6B /* libx264.164.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
++		CE6E7D6A2E64644D00890E6B /* libx264.165.dylib in Copy Dylibs */ = {isa = PBXBuildFile; fileRef = CE6E7C842E64644500890E6B /* libx264.165.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 +		CE6E7D6B2E64644D00890E6B /* libx265.215.dylib in Copy Dylibs */ = {isa = PBXBuildFile; fileRef = CE6E7C852E64644500890E6B /* libx265.215.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 +		CE6E7D6C2E64644D00890E6B /* libXau.6.dylib in Copy Dylibs */ = {isa = PBXBuildFile; fileRef = CE6E7C862E64644500890E6B /* libXau.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 +		CE6E7D6D2E64644D00890E6B /* libxcb-shape.0.dylib in Copy Dylibs */ = {isa = PBXBuildFile; fileRef = CE6E7C872E64644500890E6B /* libxcb-shape.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -543,7 +543,7 @@ index d54fe66..1b4a9fa 100644
 +				CE6E7D672E64644D00890E6B /* libwebp.7.dylib in Copy Dylibs */,
 +				CE6E7D682E64644D00890E6B /* libwebpmux.3.dylib in Copy Dylibs */,
 +				CE6E7D692E64644D00890E6B /* libX11.6.dylib in Copy Dylibs */,
-+				CE6E7D6A2E64644D00890E6B /* libx264.164.dylib in Copy Dylibs */,
++				CE6E7D6A2E64644D00890E6B /* libx264.165.dylib in Copy Dylibs */,
 +				CE6E7D6B2E64644D00890E6B /* libx265.215.dylib in Copy Dylibs */,
 +				CE6E7D6C2E64644D00890E6B /* libXau.6.dylib in Copy Dylibs */,
 +				CE6E7D6D2E64644D00890E6B /* libxcb-shape.0.dylib in Copy Dylibs */,
@@ -741,7 +741,7 @@ index d54fe66..1b4a9fa 100644
 +		CE6E7C812E64644500890E6B /* libwebp.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libwebp.7.dylib; path = deps/lib/libwebp.7.dylib; sourceTree = "<group>"; };
 +		CE6E7C822E64644500890E6B /* libwebpmux.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libwebpmux.3.dylib; path = deps/lib/libwebpmux.3.dylib; sourceTree = "<group>"; };
 +		CE6E7C832E64644500890E6B /* libX11.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libX11.6.dylib; path = deps/lib/libX11.6.dylib; sourceTree = "<group>"; };
-+		CE6E7C842E64644500890E6B /* libx264.164.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libx264.164.dylib; path = deps/lib/libx264.164.dylib; sourceTree = "<group>"; };
++		CE6E7C842E64644500890E6B /* libx264.165.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libx264.165.dylib; path = deps/lib/libx264.165.dylib; sourceTree = "<group>"; };
 +		CE6E7C852E64644500890E6B /* libx265.215.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libx265.215.dylib; path = deps/lib/libx265.215.dylib; sourceTree = "<group>"; };
 +		CE6E7C862E64644500890E6B /* libXau.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libXau.6.dylib; path = deps/lib/libXau.6.dylib; sourceTree = "<group>"; };
 +		CE6E7C872E64644500890E6B /* libxcb-shape.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libxcb-shape.0.dylib"; path = "deps/lib/libxcb-shape.0.dylib"; sourceTree = "<group>"; };
@@ -867,7 +867,7 @@ index d54fe66..1b4a9fa 100644
 +				CE6E7CAC2E64644500890E6B /* libssh.4.dylib in Frameworks */,
 +				CE6E7CAD2E64644500890E6B /* libswresample.6.dylib in Frameworks */,
 +				CE6E7CAE2E64644500890E6B /* libogg.0.dylib in Frameworks */,
-+				CE6E7CB02E64644500890E6B /* libx264.164.dylib in Frameworks */,
++				CE6E7CB02E64644500890E6B /* libx264.165.dylib in Frameworks */,
 +				CE6E7CB12E64644500890E6B /* libssl.3.dylib in Frameworks */,
 +				CE6E7CB22E64644500890E6B /* libx265.215.dylib in Frameworks */,
 +				CE6E7CB52E64644500890E6B /* libzimg.2.dylib in Frameworks */,
@@ -1112,7 +1112,7 @@ index d54fe66..1b4a9fa 100644
 +				CE6E7C812E64644500890E6B /* libwebp.7.dylib */,
 +				CE6E7C822E64644500890E6B /* libwebpmux.3.dylib */,
 +				CE6E7C832E64644500890E6B /* libX11.6.dylib */,
-+				CE6E7C842E64644500890E6B /* libx264.164.dylib */,
++				CE6E7C842E64644500890E6B /* libx264.165.dylib */,
 +				CE6E7C852E64644500890E6B /* libx265.215.dylib */,
 +				CE6E7C862E64644500890E6B /* libXau.6.dylib */,
 +				CE6E7C872E64644500890E6B /* libxcb-shape.0.dylib */,
@@ -1141,7 +1141,7 @@ index 2bb37dd..96ceebb 100755
 @@ -116,7 +117,7 @@ while !libs.empty?
              File.join(folder, basename)
          end
- 
+
 -      unless File.exists?(dest)
 +      unless File.exist?(dest)
          cp src, lib_folder, preserve: true
